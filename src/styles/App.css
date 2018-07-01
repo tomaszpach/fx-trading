@@ -1,0 +1,110 @@
+html {
+  background-color: #e8e8e8;
+  padding: 15px; }
+
+#app .panel {
+  display: inline-block;
+  width: calc(100% - 2px);
+  margin: 5px 0;
+  background-color: #f0f0f1;
+  border: 1px solid #aaacac; }
+  #app .panel .title {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    background-color: #5c5c5d;
+    font-size: 18px;
+    padding: 2px; }
+  #app .panel .sell-buy {
+    display: flex;
+    padding: 10px; }
+    #app .panel .sell-buy .top-description {
+      margin: 0; }
+    #app .panel .sell-buy .featured {
+      font-size: 22px; }
+    #app .panel .sell-buy .sell, #app .panel .sell-buy .buy {
+      position: relative;
+      padding: 5px;
+      border: 1px solid #dddede;
+      background-color: #fff;
+      flex: 2;
+      transition: all 300ms; }
+      #app .panel .sell-buy .sell:hover, #app .panel .sell-buy .buy:hover {
+        color: #fff;
+        border-color: #50acc4; }
+      #app .panel .sell-buy .sell:before, #app .panel .sell-buy .sell:after, #app .panel .sell-buy .buy:before, #app .panel .sell-buy .buy:after {
+        content: "";
+        background: #fff;
+        border-radius: 4px;
+        display: block;
+        height: 15px;
+        position: absolute;
+        transition: all 300ms;
+        width: 30px;
+        border: 1px solid #dddede; }
+      #app .panel .sell-buy .sell:before, #app .panel .sell-buy .buy:before {
+        top: 7px;
+        border-bottom: none;
+        border-left: none;
+        border-right: none; }
+      #app .panel .sell-buy .sell:after, #app .panel .sell-buy .buy:after {
+        top: 24px;
+        border-top: none;
+        border-right: none;
+        border-left: none; }
+    #app .panel .sell-buy .sell {
+      color: #c71823;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px; }
+      #app .panel .sell-buy .sell:hover {
+        background-color: #fc0d1b; }
+        #app .panel .sell-buy .sell:hover:before, #app .panel .sell-buy .sell:hover:after {
+          background-color: #fc0d1b;
+          border-color: #50acc4; }
+      #app .panel .sell-buy .sell:before, #app .panel .sell-buy .sell:after {
+        right: -15px; }
+      #app .panel .sell-buy .sell:before {
+        transform: rotate(52deg); }
+      #app .panel .sell-buy .sell:after {
+        transform: rotate(-52deg); }
+    #app .panel .sell-buy .buy {
+      color: #698834;
+      text-align: right;
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px; }
+      #app .panel .sell-buy .buy:hover {
+        background-color: #81cf47; }
+        #app .panel .sell-buy .buy:hover:before, #app .panel .sell-buy .buy:hover:after {
+          background-color: #81cf47;
+          border-color: #50acc4; }
+      #app .panel .sell-buy .buy:before, #app .panel .sell-buy .buy:after {
+        left: -15px; }
+      #app .panel .sell-buy .buy:before {
+        transform: rotate(-52deg); }
+      #app .panel .sell-buy .buy:after {
+        transform: rotate(52deg); }
+    #app .panel .sell-buy .arrow-wrapper {
+      display: flex;
+      justify-content: center;
+      flex: 1; }
+      #app .panel .sell-buy .arrow-wrapper .arrow {
+        margin: 0 5px;
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent; }
+        #app .panel .sell-buy .arrow-wrapper .arrow.up {
+          border-bottom: 12px solid green; }
+        #app .panel .sell-buy .arrow-wrapper .arrow.down {
+          border-top: 12px solid red; }
+
+@media only screen and (min-width: 576px) {
+  #app .panel {
+    width: calc(50% - 8px);
+    margin: 5px 3px; } }
+@media only screen and (min-width: 768px) {
+  #app .panel {
+    width: calc(25% - 8px);
+    margin: 5px 3px; } }
+
+/*# sourceMappingURL=App.css.map */

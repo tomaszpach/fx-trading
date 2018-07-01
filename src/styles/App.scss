@@ -1,0 +1,172 @@
+html {
+    background-color: #e8e8e8;
+    padding: 15px;
+}
+
+#app {
+    .panel {
+        display: inline-block;
+        width: calc(100% - 2px);
+        margin: 5px 0;
+        background-color: #f0f0f1;
+        border: 1px solid #aaacac;
+
+        .title {
+            color: #fff;
+            margin: 0;
+            text-align: center;
+            background-color: #5c5c5d;
+            font-size: 18px;
+            padding: 2px;
+        }
+
+        .sell-buy {
+            display: flex;
+            padding: 10px;
+
+            .top-description {
+                margin: 0;
+            }
+
+            .featured {
+                font-size: 22px;
+            }
+
+            .sell, .buy {
+                position: relative;
+                padding: 5px;
+                border: 1px solid #dddede;
+                background-color: #fff;
+                flex: 2;
+                transition: all 300ms;
+
+                &:hover {
+                    color: #fff;
+                    border-color: #50acc4;
+                }
+
+                &:before, &:after {
+                    content: "";
+                    background: #fff;
+                    border-radius: 4px;
+                    display: block;
+                    height: 15px;
+                    position: absolute;
+                    transition: all 300ms;
+                    width: 30px;
+                    border: 1px solid #dddede;
+                }
+
+                &:before {
+                    top: 7px;
+                    border-bottom: none;
+                    border-left: none;
+                    border-right: none;
+                }
+
+                &:after {
+                    top: 24px;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                }
+            }
+
+            .sell {
+                color: #c71823;
+                border-top-right-radius: 7px;
+                border-bottom-right-radius: 7px;
+
+                &:hover {
+                    background-color: #fc0d1b;
+
+                    &:before, &:after {
+                        background-color: #fc0d1b;
+                        border-color: #50acc4;
+                    }
+                }
+
+                &:before, &:after {
+                    right: -15px;
+                }
+
+                &:before {
+                    transform: rotate(52deg);
+                }
+
+                &:after {
+                    transform: rotate(-52deg);
+                }
+            }
+
+            .buy {
+                color: #698834;
+                text-align: right;
+                border-top-left-radius: 7px;
+                border-bottom-left-radius: 7px;
+
+                &:hover {
+                    background-color: #81cf47;
+
+                    &:before, &:after {
+                        background-color: #81cf47;
+                        border-color: #50acc4;
+                    }
+                }
+
+                &:before, &:after {
+                    left: -15px;
+                }
+
+                &:before {
+                    transform: rotate(-52deg);
+                }
+
+                &:after {
+                    transform: rotate(52deg);
+                }
+            }
+
+            .arrow-wrapper {
+                display: flex;
+                justify-content: center;
+                flex: 1;
+
+                .arrow {
+                    margin: 0 5px;
+                    width: 0;
+                    height: 0;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+
+                    &.up {
+                        border-bottom: 12px solid green;
+                    }
+
+                    &.down {
+                        border-top: 12px solid red;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    #app {
+        .panel {
+            width: calc(50% - 8px);
+            margin: 5px 3px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #app {
+        .panel {
+            width: calc(25% - 8px);
+            margin: 5px 3px;
+        }
+    }
+}
