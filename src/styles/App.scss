@@ -165,8 +165,15 @@ html {
 @media only screen and (min-width: 768px) {
     #app {
         .panel {
+            width: calc(33% - 8px);
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #app {
+        .panel {
             width: calc(25% - 8px);
-            margin: 5px 3px;
         }
     }
 }
