@@ -1,3 +1,11 @@
+$greenBg: #81cf47;
+$greenText: #698834;
+
+$redBg: #fc0d1b;
+$redText: #c71823;
+
+$blueBorder: #50acc4;
+
 html {
     background-color: #e8e8e8;
     padding: 15px;
@@ -48,7 +56,7 @@ html {
 
                 &:hover {
                     color: #fff;
-                    border-color: #50acc4;
+                    border-color: $blueBorder;
                 }
 
                 &:before, &:after {
@@ -79,16 +87,16 @@ html {
             }
 
             .sell {
-                color: #c71823;
+                color: $redText;
                 border-top-right-radius: 7px;
                 border-bottom-right-radius: 7px;
 
                 &:hover {
-                    background-color: #fc0d1b;
+                    background-color: $redBg;
 
                     &:before, &:after {
-                        background-color: #fc0d1b;
-                        border-color: #50acc4;
+                        background-color: $redBg;
+                        border-color: $blueBorder;
                     }
                 }
 
@@ -112,11 +120,11 @@ html {
                 border-bottom-left-radius: 7px;
 
                 &:hover {
-                    background-color: #81cf47;
+                    background-color: $greenBg;
 
                     &:before, &:after {
-                        background-color: #81cf47;
-                        border-color: #50acc4;
+                        background-color: $greenBg;
+                        border-color: $blueBorder;
                     }
                 }
 
@@ -146,11 +154,11 @@ html {
                     border-right: 4px solid transparent;
 
                     &.up {
-                        border-bottom: 12px solid green;
+                        border-bottom: 12px solid $greenBg;
                     }
 
                     &.down {
-                        border-top: 12px solid red;
+                        border-top: 12px solid $redBg;
                     }
                 }
             }
